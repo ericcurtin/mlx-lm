@@ -2179,6 +2179,26 @@ class TestModels(unittest.TestCase):
                 "kv_lora_rank": 128,
                 "q_lora_rank": 256,
             },
+            {
+                "model_type": "opt",
+                "vocab_size": 1000,
+                "hidden_size": 128,
+                "num_hidden_layers": 4,
+                "num_attention_heads": 4,
+                "intermediate_size": 512,
+                "max_position_embeddings": 1000,
+                "word_embed_proj_dim": 128,
+                "do_layer_norm_before": True,
+            },
+            {
+                "model_type": "bloom",
+                "vocab_size": 1000,
+                "hidden_size": 128,
+                "n_layer": 4,
+                "n_head": 4,
+                "num_hidden_layers": 4,
+                "layer_norm_epsilon": 1e-5,
+            },
         ]
         for config in test_configs:
             model_type = config["model_type"]
